@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Dashboard from './components/dashboard';
+import Login from './components/login';
+import Signup from './components/signup';
 
 function App() {
+  const[screen,setScreen]=useState('login') //to handle the current screen state
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {screen==='login' && <Login setScreen={setScreen}/>}
+      {screen==='signup' && <Signup setScreen={setScreen}/>}
+      {screen==='dashboard' && <Dashboard setScreen={setScreen}/>}
+    </>  
   );
 }
 
