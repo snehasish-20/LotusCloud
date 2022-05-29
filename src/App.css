@@ -57,6 +57,7 @@ a.nav-link.active{
 #statistics h6{
   margin-right: 10px;
   color: rgb(82, 82, 82);
+  text-align: center;
 }
 hr
 {
@@ -136,6 +137,7 @@ hr
 #postInfo{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #postInfo h6{
   color: rgb(62, 62, 62);
@@ -254,4 +256,39 @@ hr
 #signUpForm h1{
   margin-bottom: 30px;
   font-size: 35px;
+}
+@media screen and (max-width:520px) {
+  .section-container{
+    width: 90%;
+    min-height: 100vh;
+  }
+  #postCircle{
+    transform: translate(65%,150%);
+  }
+  #postInfo h6{
+    font-size: 16px;
+  }
+  #postInfo span{
+    font-size: 12px;
+  }
+  #postContent p{
+    font-size: 14px;
+  }
+  .LoginContainer,.signUpContainer{
+    width: 100%;
+    min-height: 100vh;
+  }
+  .LoginImgContainer{
+    display: none;
+  }
+  .LoginContainer,.signUpContainer{
+    padding: 30px 0px 0px 30px;
+  }
+  #signUpForm,#form{
+    width: 100%;
+  }
+  .inputs,#signUpFormFooter,#formFooter{
+    width: 90%;
+  }
+ 
 }
